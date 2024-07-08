@@ -1,0 +1,17 @@
+meta {
+  name: Auth - SignIn
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://{{HOST}}:{{PORT}}/auth/signin
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "email": "thomas@sloboda.fr"
+  }
+}

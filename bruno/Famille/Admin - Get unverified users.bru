@@ -1,0 +1,15 @@
+meta {
+  name: Admin - Get unverified users
+  type: http
+  seq: 5
+}
+
+get {
+  url: http://{{HOST}}:{{PORT}}/admin/waitlist
+  body: none
+  auth: none
+}
+
+headers {
+  Cookie: access-token={{accessToken}}
+}

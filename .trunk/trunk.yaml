@@ -18,7 +18,6 @@ runtimes:
 lint:
   enabled:
     - sort-package-json@2.10.0
-    - biome@1.8.3
     - actionlint@1.7.1
     - checkov@3.2.174
     - git-diff-check

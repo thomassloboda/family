@@ -1,0 +1,19 @@
+meta {
+  name: Admin - Verify users
+  type: http
+  seq: 6
+}
+
+patch {
+  url: http://{{HOST}}:{{PORT}}/admin/users/verify
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "userIds": [
+      "60635abc-3218-44b5-a302-9c9103d50140"
+    ]
+  }
+}
