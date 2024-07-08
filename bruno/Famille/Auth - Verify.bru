@@ -1,0 +1,22 @@
+meta {
+  name: Auth - Verify
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://{{HOST}}:{{PORT}}/auth/verify/{{signinToken}}
+  body: none
+  auth: none
+}
+
+script:post-response {
+  const header = res.getHeader("set-cookie")?.[0];
+  if (!header) return;
+  
+  const accessToken = header.substring(
+    header.indexOf("=") + 1,
+    header.indexOf(";")
+  );
+  bru.setEnvVar("accessToken", accessToken);
+}
