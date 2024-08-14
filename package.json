@@ -1,8 +1,13 @@
 {
     "name": "@thomassloboda/family",
     "version": "1.0.0",
-    "scripts": {},
-    "keywords": [],
+    "scripts": {
+        "start:user-service": "npm start -w user-service",
+        "start": "concurrently \"npm run start:user-service\""
+    },
+    "workspaces": [
+        "user-service"
+    ],
     "author": {
         "name": "Thomas SLOBODA",
         "email": "thomas@sloboda.fr",
@@ -11,6 +16,7 @@
     "license": "ISC",
     "devDependencies": {
         "@eslint/js": "^9.9.0",
+        "concurrently": "^8.2.2",
         "eslint": "^9.9.0",
         "globals": "^15.9.0",
         "typescript": "^5.5.4",
