@@ -1,0 +1,13 @@
+{
+  "name": "@thomassloboda/family",
+  "version": "1.0.0",
+  "scripts": {
+  },
+  "keywords": [],
+  "author": {
+    "name": "Thomas SLOBODA",
+    "email": "thomas@sloboda.fr",
+    "url": "https://thomas.sloboda.fr"
+  },
+  "license": "ISC"
+}
