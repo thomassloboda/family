@@ -1,5 +1,5 @@
 {
     "watch": ["src"],
     "ext": "ts,json",
-    "exec": "node -r ts-node/register --env-file=.env ./src/index.ts"
+    "exec": "node --experimental-require-module -r ts-node/register --env-file=.env ./src/index.ts"
 }

@@ -1,0 +1,17 @@
+meta {
+  name: Request
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{US_PROTOCOL}}://{{US_HOST}}:{{US_PORT}}/auth/request
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "email": "john@doe.org"
+  }
+}

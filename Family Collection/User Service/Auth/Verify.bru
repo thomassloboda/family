@@ -1,0 +1,15 @@
+meta {
+  name: Verify
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{US_PROTOCOL}}://{{US_HOST}}:{{US_PORT}}/auth/verify?token=pRaLYoZYgXdZwGiuwLHAyPuLbYWu80gtxJbZaZ49UB4bifjZ9oNfAzB77y_FEAFv
+  body: none
+  auth: none
+}
+
+params:query {
+  token: pRaLYoZYgXdZwGiuwLHAyPuLbYWu80gtxJbZaZ49UB4bifjZ9oNfAzB77y_FEAFv
+}
