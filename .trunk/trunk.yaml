@@ -30,3 +30,8 @@ actions:
         - trunk-check-pre-push
         - trunk-fmt-pre-commit
         - trunk-upgrade-available
+
+ignore:
+    - linters: [ALL]
+      paths:
+          - Family Collection

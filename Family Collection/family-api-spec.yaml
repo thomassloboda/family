@@ -1,0 +1,51 @@
+openapi: 3.0.0
+info:
+    title: family-api-spec
+    version: 1.0.0
+paths:
+    /auth/request:
+        post:
+            summary: Request
+            operationId: Request
+            description: ''
+            tags:
+                - ''
+            responses:
+                '200':
+                    description: ''
+            requestBody:
+                $ref: '#/components/requestBodies/request'
+    /auth/verify:
+        get:
+            summary: Verify
+            operationId: Verify
+            description: ''
+            tags:
+                - ''
+            responses:
+                '200':
+                    description: ''
+            parameters:
+                - name: token
+                  in: query
+                  description: ''
+                  required: true
+                  example: pRaLYoZYgXdZwGiuwLHAyPuLbYWu80gtxJbZaZ49UB4bifjZ9oNfAzB77y_FEAFv
+servers:
+    - url: http://localhost:3001
+components:
+    schemas:
+        request:
+            type: object
+            properties:
+                email:
+                    type: string
+    requestBodies:
+        request:
+            content:
+                application/json:
+                    schema:
+                        $ref: '#/components/schemas/request'
+            description: ''
+            required: true
+    securitySchemes: {}
