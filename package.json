@@ -2,11 +2,13 @@
     "name": "@thomassloboda/family",
     "version": "1.0.0",
     "scripts": {
-        "start:user-service": "npm start -w user-service",
-        "start": "concurrently \"npm run start:user-service\""
+        "start:backend": "npm start -w backend",
+        "start:frontend": "npm start -w frontend",
+        "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\""
     },
     "workspaces": [
-        "user-service"
+        "backend",
+        "frontend"
     ],
     "author": {
         "name": "Thomas SLOBODA",
